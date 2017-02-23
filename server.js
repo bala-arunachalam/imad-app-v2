@@ -109,11 +109,11 @@ app.get('/counter', function (req,res) {
 
 
 var names = [];
-app.get('/submit-name/:lname', function(req, res) { //URL: /submit-name?name-xxxxx
+app.get('/submit-name/:name', function(req, res) { //URL: /submit-name?name-xxxxx
     //Get the name from the request
-    var lname = req.query.name;
+    var name = req.query.name;
     
-    names.push(lname);
+    names.push(name);
     //JSON JS Obj Notation
     res.send(JSON.stringify(names));
 });
