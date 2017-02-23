@@ -31,6 +31,6 @@ button.onclick = function () {
         //Not done yet
     };
     //make the request
-    request.open('GET', 'http://http://bala-arunachalam.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/counter', true);
     request.send(null);
 };
