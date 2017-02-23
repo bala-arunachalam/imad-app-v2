@@ -15,7 +15,7 @@
 //};
 var button = document.getElementById('counter');
 
-button.onclick = function () {
+button.onclick=function() {
     // create a request object
     var request = new XMLHttpRequest();
     //capture the response and store in a variable
@@ -33,4 +33,4 @@ button.onclick = function () {
     //make the request
     request.open('GET', 'http://http://bala-arunachalam.imad.hasura-app.io/counter', true);
     request.send(null);
-}
+};
