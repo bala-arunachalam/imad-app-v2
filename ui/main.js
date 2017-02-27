@@ -25,35 +25,36 @@ button.onclick = function () {
 };
 
 //Submit name
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
+    
     //Create a req object
      var request = new XMLHttpRequest();
     
     //Capture the response and store it in a var
-       request.onreadyStatechange = function () {
+       request.onreadystatechange = function () {
         if (request.readystate === XMLHttpRequest.DONE) {
             //take some action
             if (request.status === 200) {
-    var names = request.responseText;
-    names = JSON.parse(names);
-    var list = '';
-    for (var i=0; i< name.length; i++) {
-        list += '<li>' + name[i] + '</li>';
-    }
-          
-    var ul = document.getElementById('nameList');
-    ul.innerHTML = list;
+             var names = request.responseText;
+             names = JSON.parse(names);
+             var list = '';
+                for (var i=0; i< name.length; i++) {
+                  list += '<li>' + name[i] + '</li>';
+             }
+            var ul = document.getElementById('namelist');
+            ul.innerHTML = list;
             }
         }
+        
+        //Not done yet
+       };
     
+    //Make the request
     var nameInput = document.getElementById('name');
-var name = nameInput.value;
-            //make the request
+    var name = nameInput.value;
     request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/submit-name=?name' + name , true);
     request.send(null);
-};
 
 };
 
