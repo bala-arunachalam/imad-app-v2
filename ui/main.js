@@ -32,10 +32,10 @@ submit.onclick = function () {
     
     //Create a req object
      var request = new XMLHttpRequest();
-    
+    {
     //Capture the response and store it in a var
-       request.onreadystatechange = function () {
-        if (request.readystate === XMLHttpRequest.DONE) {
+       request.onreadystatechange = function(){
+        if (request.readyState === XMLhttpRequest.DONE) {
             //take some action
             if (request.status === 200) {
              var names = request.responseText;
@@ -48,13 +48,15 @@ submit.onclick = function () {
             ul.innerHTML = list;
             }
         }
+       };
         
         //Not done yet
-       };
+       }
     
     //Make the request
-    var nameInput = document.getElementById('name');
     var name = nameInput.value;
+    var nameInput = document.getElementById('name');
+  
     request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/submit-name=?name' + name , true);
     request.send(null);
 
