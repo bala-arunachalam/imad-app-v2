@@ -61,7 +61,7 @@ var content = data.content;
 var htmlTemplate = `
 <html>
     <head>
-        <title>  ${title} </title>
+        <title>${title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -106,7 +106,7 @@ app.get('/submit-name/:name', function(req, res) { //URL: /submit-name?name-xxxx
     
     names.push(name);
     //JSON JS Obj Notation
-    res.send(JSON.stringify(names));
+    res.send(JSON.Stringify(names));
 });
 
 app.get('/:articleName', function (req, res) {
