@@ -57,7 +57,7 @@ submit.onclick = function () {
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
       
-    request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/submit-name=?name' + name);
+    request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/submit-name=?name');
     request.send(null);
 };
 
