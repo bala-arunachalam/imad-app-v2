@@ -113,7 +113,7 @@ app.get('/submit-name', function(req, res) { //URL: /submit-name?name-xxxxx
     var name = req.query.name;
         names.push(name);
     //JSON JS Obj Notation
-    res.send(JSON.Stringify(names));
+    res.send(JSON.stringify(names));
 });
 
 app.get('articles/:articleName', function (req, res) {
