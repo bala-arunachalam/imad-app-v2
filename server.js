@@ -62,8 +62,8 @@ var htmlTemplate = `
 <html>
     <head>
         <title>${title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="/ui/style.css" rel="stylesheet" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="/ui/style.css" rel="stylesheet" />
     </head>
 <body>
 
@@ -76,12 +76,20 @@ var htmlTemplate = `
          ${heading}
          </h3>
          <div>
-          ${date}
+          ${date.toDateString()}
          </div>
          <div>
           ${content}
          </div>
-    </div>
+                      <hr/>
+              <h4>Comments</h4>
+              <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center>
+              </div>
+          </div>
+          <script type="text/javascript" src="/ui/article.js"></script>
 </body>
 </html>
 `;
