@@ -22,7 +22,7 @@ button.onclick = function () {
     }
     
     //make the request
-    request.open('GET', 'http://bala-arunachalam.imad.hasura-app.io/counter');
+    request.open('GET', '/counter');
     request.send(null);
 };
 
