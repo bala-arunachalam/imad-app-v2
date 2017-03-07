@@ -2,14 +2,14 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var http = require('http');
+//var http = require('http');
 
 var config = {
   //host: 'localhost',
   user: 'bala-arunachalam',
   db: 'bala-arunachalam',
   host: 'http://db.imad.hasura-app.io',
-  path: '/database.php?pgsql=localhost%3A5432',
+  // path: '/database.php?pgsql=localhost%3A5432',
   port: '5432',
   password: 'bala-arunachalam' //process.env.DB-PASSWORD,
 };
