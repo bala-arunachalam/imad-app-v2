@@ -6,7 +6,7 @@ var Pool = require('pg').Pool;
 var config = {
   //host: 'localhost',
   user: 'bala-arunachalam',
-  password: process.env.DB-PASSWORD,
+  password: 'bala-arunachalam', //process.env.DB-PASSWORD,
   db: 'bala-arunachalam',
   host: 'http://db.imad.hasura-app.io',
   port: '5432'
@@ -143,7 +143,7 @@ app.get('/submit-name', function(req, res) { //URL: /submit-name?name-xxxxx
 app.get('articles/:articleName', function (req, res) {
     //articleName == article-one
     //articles[articleName] == {} content object for article one
-    pool.query("SELECT * from article where title = " + req.params.articleName, function(err,result){
+    pool.query("SELECT * from article where title = '" + req.params.articleName +"'", function(err,result){
         if (err) {
           res.status(500).send(err.toString());
       } else {
