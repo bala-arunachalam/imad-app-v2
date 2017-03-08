@@ -8,7 +8,7 @@ var config = {
   //host: 'localhost',
   user: 'bala-arunachalam',
   db: 'bala-arunachalam',
-  host: 'http://db.imad.hasura-app.io',
+  host: 'db.imad.hasura-app.io',
   // path: '/database.php?pgsql=localhost%3A5432',
   port: '5432',
   password: 'bala-arunachalam' //process.env.DB-PASSWORD,
