@@ -143,7 +143,7 @@ app.get('/submit-name', function(req, res) { //URL: /submit-name?name-xxxxx
     res.send(JSON.stringify(names));
 });
 
-app.get('articles/:articleName', function (req, res) {
+app.get('/articles/:articleName', function (req, res) {
     //articleName == article-one
     //articles[articleName] == {} content object for article one
 //    pool.query("SELECT * from article where title = '"+ req.params.articleName +"'", function(err, result) {
