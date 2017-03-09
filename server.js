@@ -11,7 +11,7 @@ var config = {
   host: 'db.imad.hasura-app.io',
   //path: '/database.php?pgsql=localhost%3A5432',
   port: '5432',
-  password: 'bala-arunachalam' //process.env.DB_PASSWORD
+  password: 'db-bala-arunachalam-70572' //process.env.DB_PASSWORD
 };
 
 var app = express();
