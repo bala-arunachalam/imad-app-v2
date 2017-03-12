@@ -22,7 +22,7 @@ app.use(morgan('combined'));
 //JSON content goes into req.body using bodyParser in express framework
 app.use(bodyParser.json());
 app.use(session({
-    secret :'someRandomsecretvalue',
+    secret :'someRandomSecretValue',
     cookie :{maxAge :1000 * 60 * 60 * 24 * 30},
     resave: true,
     saveUninitialized: true
