@@ -4,6 +4,8 @@ var path = require('path');
 var crypto = require('crypto');
 var Pool = require('pg').Pool;
 //var http = require('http');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
   //host: 'localhost',
